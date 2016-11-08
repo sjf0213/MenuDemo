@@ -10,6 +10,11 @@
 		F078D6DE1DD16FC2003817D3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F078D6DD1DD16FC2003817D3 /* HomeViewController.m */; };
 		F078D6E01DD17CFE003817D3 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F078D6DF1DD17CFE003817D3 /* WebImage.framework */; };
 		F078D6E11DD17CFE003817D3 /* WebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F078D6DF1DD17CFE003817D3 /* WebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F08BC57E1DD1A6BE00DAB9F2 /* HomeMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = F08BC5791DD1A6BE00DAB9F2 /* HomeMenu.plist */; };
+		F08BC57F1DD1A6BE00DAB9F2 /* HomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F08BC57B1DD1A6BE00DAB9F2 /* HomeMenuItem.m */; };
+		F08BC5801DD1A6BE00DAB9F2 /* HomeScrollMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F08BC57D1DD1A6BE00DAB9F2 /* HomeScrollMenu.m */; };
+		F08BC5841DD1AC3700DAB9F2 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F08BC5831DD1AC3700DAB9F2 /* MainNavigationController.m */; };
+		F08BC5871DD1AEBE00DAB9F2 /* TopicCategoryHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F08BC5861DD1AEBE00DAB9F2 /* TopicCategoryHelper.m */; };
 		F08CC0AD1DD02529001DDE0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F08CC0AC1DD02529001DDE0B /* main.m */; };
 		F08CC0B01DD02529001DDE0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F08CC0AF1DD02529001DDE0B /* AppDelegate.m */; };
 		F08CC0B61DD02529001DDE0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F08CC0B41DD02529001DDE0B /* Main.storyboard */; };
@@ -35,6 +40,16 @@
 		F078D6DC1DD16FC2003817D3 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		F078D6DD1DD16FC2003817D3 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		F078D6DF1DD17CFE003817D3 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
+		F08BC5791DD1A6BE00DAB9F2 /* HomeMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomeMenu.plist; sourceTree = "<group>"; };
+		F08BC57A1DD1A6BE00DAB9F2 /* HomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMenuItem.h; sourceTree = "<group>"; };
+		F08BC57B1DD1A6BE00DAB9F2 /* HomeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMenuItem.m; sourceTree = "<group>"; };
+		F08BC57C1DD1A6BE00DAB9F2 /* HomeScrollMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScrollMenu.h; sourceTree = "<group>"; };
+		F08BC57D1DD1A6BE00DAB9F2 /* HomeScrollMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScrollMenu.m; sourceTree = "<group>"; };
+		F08BC5821DD1AC3700DAB9F2 /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
+		F08BC5831DD1AC3700DAB9F2 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
+		F08BC5851DD1AEBE00DAB9F2 /* TopicCategoryHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopicCategoryHelper.h; path = ../TopicCategoryHelper.h; sourceTree = "<group>"; };
+		F08BC5861DD1AEBE00DAB9F2 /* TopicCategoryHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopicCategoryHelper.m; path = ../TopicCategoryHelper.m; sourceTree = "<group>"; };
+		F08BC5881DD1C00700DAB9F2 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		F08CC0A81DD02529001DDE0B /* MenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08CC0AC1DD02529001DDE0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F08CC0AE1DD02529001DDE0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,11 +72,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F08CC09F1DD02529001DDE0B = {
+		F08BC5781DD1A6BE00DAB9F2 /* HomeMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F08BC5851DD1AEBE00DAB9F2 /* TopicCategoryHelper.h */,
+				F08BC5861DD1AEBE00DAB9F2 /* TopicCategoryHelper.m */,
+				F08BC5791DD1A6BE00DAB9F2 /* HomeMenu.plist */,
+				F08BC57A1DD1A6BE00DAB9F2 /* HomeMenuItem.h */,
+				F08BC57B1DD1A6BE00DAB9F2 /* HomeMenuItem.m */,
+				F08BC57C1DD1A6BE00DAB9F2 /* HomeScrollMenu.h */,
+				F08BC57D1DD1A6BE00DAB9F2 /* HomeScrollMenu.m */,
+			);
+			path = HomeMenu;
+			sourceTree = "<group>";
+		};
+		F08BC5811DD1A6D400DAB9F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				F078D6DF1DD17CFE003817D3 /* WebImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F08CC09F1DD02529001DDE0B = {
+			isa = PBXGroup;
+			children = (
 				F08CC0AA1DD02529001DDE0B /* MenuDemo */,
+				F08BC5811DD1A6D400DAB9F2 /* Frameworks */,
 				F08CC0A91DD02529001DDE0B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,10 +114,14 @@
 		F08CC0AA1DD02529001DDE0B /* MenuDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F08BC5781DD1A6BE00DAB9F2 /* HomeMenu */,
 				F08CC0AE1DD02529001DDE0B /* AppDelegate.h */,
 				F08CC0AF1DD02529001DDE0B /* AppDelegate.m */,
 				F078D6DC1DD16FC2003817D3 /* HomeViewController.h */,
 				F078D6DD1DD16FC2003817D3 /* HomeViewController.m */,
+				F08BC5821DD1AC3700DAB9F2 /* MainNavigationController.h */,
+				F08BC5831DD1AC3700DAB9F2 /* MainNavigationController.m */,
+				F08CC0B41DD02529001DDE0B /* Main.storyboard */,
 				F08CC0AB1DD02529001DDE0B /* Supporting Files */,
 			);
 			path = MenuDemo;
@@ -89,8 +130,8 @@
 		F08CC0AB1DD02529001DDE0B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F08BC5881DD1C00700DAB9F2 /* Prefix.pch */,
 				F08CC0B71DD02529001DDE0B /* Assets.xcassets */,
-				F08CC0B41DD02529001DDE0B /* Main.storyboard */,
 				F08CC0B91DD02529001DDE0B /* LaunchScreen.storyboard */,
 				F08CC0BC1DD02529001DDE0B /* Info.plist */,
 				F08CC0AC1DD02529001DDE0B /* main.m */,
@@ -160,6 +201,7 @@
 			files = (
 				F08CC0BB1DD02529001DDE0B /* LaunchScreen.storyboard in Resources */,
 				F08CC0B81DD02529001DDE0B /* Assets.xcassets in Resources */,
+				F08BC57E1DD1A6BE00DAB9F2 /* HomeMenu.plist in Resources */,
 				F08CC0B61DD02529001DDE0B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,8 +229,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F08BC5801DD1A6BE00DAB9F2 /* HomeScrollMenu.m in Sources */,
+				F08BC5871DD1AEBE00DAB9F2 /* TopicCategoryHelper.m in Sources */,
 				F08CC0B01DD02529001DDE0B /* AppDelegate.m in Sources */,
+				F08BC5841DD1AC3700DAB9F2 /* MainNavigationController.m in Sources */,
 				F08CC0AD1DD02529001DDE0B /* main.m in Sources */,
+				F08BC57F1DD1A6BE00DAB9F2 /* HomeMenuItem.m in Sources */,
 				F078D6DE1DD16FC2003817D3 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +292,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = MenuDemo/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -293,6 +340,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = MenuDemo/Prefix.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

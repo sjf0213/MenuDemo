@@ -7,9 +7,9 @@
 //
 
 #import "HomeViewController.h"
-
+#import "HomeScrollMenu.h"
 @interface HomeViewController ()
-
+@property (strong, nonatomic) IBOutlet HomeScrollMenu *homeMenu;
 @end
 
 @implementation HomeViewController
