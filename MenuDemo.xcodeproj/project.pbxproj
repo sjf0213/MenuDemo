@@ -23,6 +23,11 @@
 		F08CC0BB1DD02529001DDE0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F08CC0B91DD02529001DDE0B /* LaunchScreen.storyboard */; };
 		F0CA02F01DD2BB5700C721E9 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA02EF1DD2BB5700C721E9 /* ListViewController.m */; };
 		F0CA02F31DD2BFAE00C721E9 /* TopicListView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA02F21DD2BFAE00C721E9 /* TopicListView.m */; };
+		F0CA02FA1DD2F2FA00C721E9 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0CA02F91DD2F2FA00C721E9 /* AFNetworking.framework */; };
+		F0CA02FB1DD2F2FA00C721E9 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0CA02F91DD2F2FA00C721E9 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F0CA02FE1DD2FFFD00C721E9 /* TopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA02FD1DD2FFFD00C721E9 /* TopicModel.m */; };
+		F0CA03041DD300CC00C721E9 /* TopicViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA03031DD300CC00C721E9 /* TopicViewModel.m */; };
+		F0CA03081DD30A7100C721E9 /* TopicListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA03071DD30A7100C721E9 /* TopicListCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +38,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F078D6E11DD17CFE003817D3 /* WebImage.framework in Embed Frameworks */,
+				F0CA02FB1DD2F2FA00C721E9 /* AFNetworking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +74,13 @@
 		F0CA02EF1DD2BB5700C721E9 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		F0CA02F11DD2BFAE00C721E9 /* TopicListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicListView.h; sourceTree = "<group>"; };
 		F0CA02F21DD2BFAE00C721E9 /* TopicListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicListView.m; sourceTree = "<group>"; };
+		F0CA02F91DD2F2FA00C721E9 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
+		F0CA02FC1DD2FFFD00C721E9 /* TopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicModel.h; sourceTree = "<group>"; };
+		F0CA02FD1DD2FFFD00C721E9 /* TopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicModel.m; sourceTree = "<group>"; };
+		F0CA03021DD300CC00C721E9 /* TopicViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicViewModel.h; sourceTree = "<group>"; };
+		F0CA03031DD300CC00C721E9 /* TopicViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicViewModel.m; sourceTree = "<group>"; };
+		F0CA03061DD30A7100C721E9 /* TopicListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicListCell.h; sourceTree = "<group>"; };
+		F0CA03071DD30A7100C721E9 /* TopicListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicListCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F078D6E01DD17CFE003817D3 /* WebImage.framework in Frameworks */,
+				F0CA02FA1DD2F2FA00C721E9 /* AFNetworking.framework in Frameworks */,
 				71E1C23369D95652D7D199D8 /* libPods-MenuDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +123,7 @@
 		F08BC5811DD1A6D400DAB9F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0CA02F91DD2F2FA00C721E9 /* AFNetworking.framework */,
 				F078D6DF1DD17CFE003817D3 /* WebImage.framework */,
 				EA04FE0C2D47EFC7D1103F84 /* libPods-MenuDemo.a */,
 			);
@@ -137,6 +152,7 @@
 		F08CC0AA1DD02529001DDE0B /* MenuDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F0CA03051DD30A4500C721E9 /* Model */,
 				F08BC5781DD1A6BE00DAB9F2 /* HomeMenu */,
 				F08CC0B41DD02529001DDE0B /* Main.storyboard */,
 				F08CC0AE1DD02529001DDE0B /* AppDelegate.h */,
@@ -149,6 +165,8 @@
 				F0CA02EF1DD2BB5700C721E9 /* ListViewController.m */,
 				F0CA02F11DD2BFAE00C721E9 /* TopicListView.h */,
 				F0CA02F21DD2BFAE00C721E9 /* TopicListView.m */,
+				F0CA03061DD30A7100C721E9 /* TopicListCell.h */,
+				F0CA03071DD30A7100C721E9 /* TopicListCell.m */,
 			);
 			path = MenuDemo;
 			sourceTree = "<group>";
@@ -164,6 +182,17 @@
 			);
 			name = "Supporting Files";
 			path = MenuDemo;
+			sourceTree = "<group>";
+		};
+		F0CA03051DD30A4500C721E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0CA02FC1DD2FFFD00C721E9 /* TopicModel.h */,
+				F0CA02FD1DD2FFFD00C721E9 /* TopicModel.m */,
+				F0CA03021DD300CC00C721E9 /* TopicViewModel.h */,
+				F0CA03031DD300CC00C721E9 /* TopicViewModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,11 +333,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CA03041DD300CC00C721E9 /* TopicViewModel.m in Sources */,
 				F08BC5801DD1A6BE00DAB9F2 /* HomeScrollMenu.m in Sources */,
 				F08BC5871DD1AEBE00DAB9F2 /* TopicCategoryHelper.m in Sources */,
 				F0CA02F01DD2BB5700C721E9 /* ListViewController.m in Sources */,
 				F08CC0B01DD02529001DDE0B /* AppDelegate.m in Sources */,
+				F0CA03081DD30A7100C721E9 /* TopicListCell.m in Sources */,
 				F08BC5841DD1AC3700DAB9F2 /* MainNavigationController.m in Sources */,
+				F0CA02FE1DD2FFFD00C721E9 /* TopicModel.m in Sources */,
 				F0CA02F31DD2BFAE00C721E9 /* TopicListView.m in Sources */,
 				F08CC0AD1DD02529001DDE0B /* main.m in Sources */,
 				F08BC57F1DD1A6BE00DAB9F2 /* HomeMenuItem.m in Sources */,

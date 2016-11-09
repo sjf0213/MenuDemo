@@ -102,6 +102,9 @@
     [self.mainScroll addSubview:listController.view];
     [self setListController:listController ForIndex:index];
     [self addChildViewController:listController];
+    
+    TopicCategoryModel* category = [self.homeMenu categoryModelInPosition:index];
+    [listController setCategoryId:category.categoryId];
 }
 
 #pragma mark - UIScrollViewDelegate

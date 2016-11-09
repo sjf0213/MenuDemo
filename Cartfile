@@ -1,1 +1,2 @@
 github "rs/SDWebImage" ~> 3.8
+github "AFNetworking/AFNetworking" ~> 3.0

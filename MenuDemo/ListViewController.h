@@ -10,7 +10,7 @@
 @class TopicListView;
 
 @interface ListViewController : UIViewController
-
+@property(nonatomic, assign)NSInteger categoryId;
 -(instancetype)initWithFrame:(CGRect)frame;
 
 @end
