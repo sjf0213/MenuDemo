@@ -28,6 +28,12 @@
 		F0CA02FE1DD2FFFD00C721E9 /* TopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA02FD1DD2FFFD00C721E9 /* TopicModel.m */; };
 		F0CA03041DD300CC00C721E9 /* TopicViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA03031DD300CC00C721E9 /* TopicViewModel.m */; };
 		F0CA03081DD30A7100C721E9 /* TopicListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA03071DD30A7100C721E9 /* TopicListCell.m */; };
+		F0CA03111DD30BBB00C721E9 /* ApiBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA030C1DD30BBB00C721E9 /* ApiBuilder.m */; };
+		F0CA03121DD30BBB00C721E9 /* LHNetClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA030E1DD30BBB00C721E9 /* LHNetClient.m */; };
+		F0CA03131DD30BBB00C721E9 /* LHNetEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA03101DD30BBB00C721E9 /* LHNetEngine.m */; };
+		F0CA03171DD30DB300C721E9 /* NFSNSString+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA03161DD30DB300C721E9 /* NFSNSString+URL.m */; };
+		F0CA031A1DD30F0000C721E9 /* NFSNSData+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA03191DD30F0000C721E9 /* NFSNSData+URL.m */; };
+		F0CA031D1DD30F5300C721E9 /* NFSNSDictionary+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA031C1DD30F5300C721E9 /* NFSNSDictionary+URL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -81,6 +87,18 @@
 		F0CA03031DD300CC00C721E9 /* TopicViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicViewModel.m; sourceTree = "<group>"; };
 		F0CA03061DD30A7100C721E9 /* TopicListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicListCell.h; sourceTree = "<group>"; };
 		F0CA03071DD30A7100C721E9 /* TopicListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicListCell.m; sourceTree = "<group>"; };
+		F0CA030B1DD30BBB00C721E9 /* ApiBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiBuilder.h; sourceTree = "<group>"; };
+		F0CA030C1DD30BBB00C721E9 /* ApiBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiBuilder.m; sourceTree = "<group>"; };
+		F0CA030D1DD30BBB00C721E9 /* LHNetClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHNetClient.h; sourceTree = "<group>"; };
+		F0CA030E1DD30BBB00C721E9 /* LHNetClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHNetClient.m; sourceTree = "<group>"; };
+		F0CA030F1DD30BBB00C721E9 /* LHNetEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHNetEngine.h; sourceTree = "<group>"; };
+		F0CA03101DD30BBB00C721E9 /* LHNetEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHNetEngine.m; sourceTree = "<group>"; };
+		F0CA03151DD30DB300C721E9 /* NFSNSString+URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NFSNSString+URL.h"; sourceTree = "<group>"; };
+		F0CA03161DD30DB300C721E9 /* NFSNSString+URL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NFSNSString+URL.m"; sourceTree = "<group>"; };
+		F0CA03181DD30F0000C721E9 /* NFSNSData+URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NFSNSData+URL.h"; sourceTree = "<group>"; };
+		F0CA03191DD30F0000C721E9 /* NFSNSData+URL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NFSNSData+URL.m"; sourceTree = "<group>"; };
+		F0CA031B1DD30F5300C721E9 /* NFSNSDictionary+URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NFSNSDictionary+URL.h"; sourceTree = "<group>"; };
+		F0CA031C1DD30F5300C721E9 /* NFSNSDictionary+URL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NFSNSDictionary+URL.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +170,8 @@
 		F08CC0AA1DD02529001DDE0B /* MenuDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F0CA03141DD30DB300C721E9 /* Helper */,
+				F0CA030A1DD30BBB00C721E9 /* Network */,
 				F0CA03051DD30A4500C721E9 /* Model */,
 				F08BC5781DD1A6BE00DAB9F2 /* HomeMenu */,
 				F08CC0B41DD02529001DDE0B /* Main.storyboard */,
@@ -193,6 +213,32 @@
 				F0CA03031DD300CC00C721E9 /* TopicViewModel.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		F0CA030A1DD30BBB00C721E9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F0CA030B1DD30BBB00C721E9 /* ApiBuilder.h */,
+				F0CA030C1DD30BBB00C721E9 /* ApiBuilder.m */,
+				F0CA030D1DD30BBB00C721E9 /* LHNetClient.h */,
+				F0CA030E1DD30BBB00C721E9 /* LHNetClient.m */,
+				F0CA030F1DD30BBB00C721E9 /* LHNetEngine.h */,
+				F0CA03101DD30BBB00C721E9 /* LHNetEngine.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F0CA03141DD30DB300C721E9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F0CA031B1DD30F5300C721E9 /* NFSNSDictionary+URL.h */,
+				F0CA031C1DD30F5300C721E9 /* NFSNSDictionary+URL.m */,
+				F0CA03181DD30F0000C721E9 /* NFSNSData+URL.h */,
+				F0CA03191DD30F0000C721E9 /* NFSNSData+URL.m */,
+				F0CA03151DD30DB300C721E9 /* NFSNSString+URL.h */,
+				F0CA03161DD30DB300C721E9 /* NFSNSString+URL.m */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,11 +383,17 @@
 				F08BC5801DD1A6BE00DAB9F2 /* HomeScrollMenu.m in Sources */,
 				F08BC5871DD1AEBE00DAB9F2 /* TopicCategoryHelper.m in Sources */,
 				F0CA02F01DD2BB5700C721E9 /* ListViewController.m in Sources */,
+				F0CA03121DD30BBB00C721E9 /* LHNetClient.m in Sources */,
 				F08CC0B01DD02529001DDE0B /* AppDelegate.m in Sources */,
 				F0CA03081DD30A7100C721E9 /* TopicListCell.m in Sources */,
 				F08BC5841DD1AC3700DAB9F2 /* MainNavigationController.m in Sources */,
 				F0CA02FE1DD2FFFD00C721E9 /* TopicModel.m in Sources */,
+				F0CA03171DD30DB300C721E9 /* NFSNSString+URL.m in Sources */,
+				F0CA03111DD30BBB00C721E9 /* ApiBuilder.m in Sources */,
 				F0CA02F31DD2BFAE00C721E9 /* TopicListView.m in Sources */,
+				F0CA031D1DD30F5300C721E9 /* NFSNSDictionary+URL.m in Sources */,
+				F0CA03131DD30BBB00C721E9 /* LHNetEngine.m in Sources */,
+				F0CA031A1DD30F0000C721E9 /* NFSNSData+URL.m in Sources */,
 				F08CC0AD1DD02529001DDE0B /* main.m in Sources */,
 				F08BC57F1DD1A6BE00DAB9F2 /* HomeMenuItem.m in Sources */,
 				F078D6DE1DD16FC2003817D3 /* HomeViewController.m in Sources */,
