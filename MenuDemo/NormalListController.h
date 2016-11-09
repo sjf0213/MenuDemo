@@ -1,5 +1,5 @@
 //
-//  TopicListView.h
+//  NormalListController.h
 //  MenuDemo
 //
 //  Created by 宋炬峰 on 2016/11/9.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TopicListView : UITableView
-@property(nonatomic, assign)BOOL notVisible;
+@interface NormalListController : UIViewController
+
 @end

@@ -11,4 +11,7 @@
 @interface TopicModel : NSObject
 @property (nonatomic, copy, readonly) NSString *ID;
 @property (nonatomic, copy, readonly) NSString *title;
+@property (nonatomic, readonly) NSTimeInterval createTime;
+
+-(instancetype)initWithDic:(NSDictionary*)dic;
 @end

@@ -34,6 +34,9 @@
 		F0CA03171DD30DB300C721E9 /* NFSNSString+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA03161DD30DB300C721E9 /* NFSNSString+URL.m */; };
 		F0CA031A1DD30F0000C721E9 /* NFSNSData+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA03191DD30F0000C721E9 /* NFSNSData+URL.m */; };
 		F0CA031D1DD30F5300C721E9 /* NFSNSDictionary+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA031C1DD30F5300C721E9 /* NFSNSDictionary+URL.m */; };
+		F0CA03231DD31D9100C721E9 /* LHRefreshTip.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA03221DD31D9100C721E9 /* LHRefreshTip.m */; };
+		F0CA03261DD3231700C721E9 /* DiscoveryListController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA03251DD3231700C721E9 /* DiscoveryListController.m */; };
+		F0CA03291DD3233700C721E9 /* NormalListController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CA03281DD3233700C721E9 /* NormalListController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -99,6 +102,12 @@
 		F0CA03191DD30F0000C721E9 /* NFSNSData+URL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NFSNSData+URL.m"; sourceTree = "<group>"; };
 		F0CA031B1DD30F5300C721E9 /* NFSNSDictionary+URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NFSNSDictionary+URL.h"; sourceTree = "<group>"; };
 		F0CA031C1DD30F5300C721E9 /* NFSNSDictionary+URL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NFSNSDictionary+URL.m"; sourceTree = "<group>"; };
+		F0CA03211DD31D9100C721E9 /* LHRefreshTip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHRefreshTip.h; sourceTree = "<group>"; };
+		F0CA03221DD31D9100C721E9 /* LHRefreshTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHRefreshTip.m; sourceTree = "<group>"; };
+		F0CA03241DD3231700C721E9 /* DiscoveryListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoveryListController.h; sourceTree = "<group>"; };
+		F0CA03251DD3231700C721E9 /* DiscoveryListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoveryListController.m; sourceTree = "<group>"; };
+		F0CA03271DD3233700C721E9 /* NormalListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalListController.h; sourceTree = "<group>"; };
+		F0CA03281DD3233700C721E9 /* NormalListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalListController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +196,12 @@
 				F0CA02F21DD2BFAE00C721E9 /* TopicListView.m */,
 				F0CA03061DD30A7100C721E9 /* TopicListCell.h */,
 				F0CA03071DD30A7100C721E9 /* TopicListCell.m */,
+				F0CA03211DD31D9100C721E9 /* LHRefreshTip.h */,
+				F0CA03221DD31D9100C721E9 /* LHRefreshTip.m */,
+				F0CA03241DD3231700C721E9 /* DiscoveryListController.h */,
+				F0CA03251DD3231700C721E9 /* DiscoveryListController.m */,
+				F0CA03271DD3233700C721E9 /* NormalListController.h */,
+				F0CA03281DD3233700C721E9 /* NormalListController.m */,
 			);
 			path = MenuDemo;
 			sourceTree = "<group>";
@@ -379,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CA03291DD3233700C721E9 /* NormalListController.m in Sources */,
 				F0CA03041DD300CC00C721E9 /* TopicViewModel.m in Sources */,
 				F08BC5801DD1A6BE00DAB9F2 /* HomeScrollMenu.m in Sources */,
 				F08BC5871DD1AEBE00DAB9F2 /* TopicCategoryHelper.m in Sources */,
@@ -387,10 +403,12 @@
 				F08CC0B01DD02529001DDE0B /* AppDelegate.m in Sources */,
 				F0CA03081DD30A7100C721E9 /* TopicListCell.m in Sources */,
 				F08BC5841DD1AC3700DAB9F2 /* MainNavigationController.m in Sources */,
+				F0CA03261DD3231700C721E9 /* DiscoveryListController.m in Sources */,
 				F0CA02FE1DD2FFFD00C721E9 /* TopicModel.m in Sources */,
 				F0CA03171DD30DB300C721E9 /* NFSNSString+URL.m in Sources */,
 				F0CA03111DD30BBB00C721E9 /* ApiBuilder.m in Sources */,
 				F0CA02F31DD2BFAE00C721E9 /* TopicListView.m in Sources */,
+				F0CA03231DD31D9100C721E9 /* LHRefreshTip.m in Sources */,
 				F0CA031D1DD30F5300C721E9 /* NFSNSDictionary+URL.m in Sources */,
 				F0CA03131DD30BBB00C721E9 /* LHNetEngine.m in Sources */,
 				F0CA031A1DD30F0000C721E9 /* NFSNSData+URL.m in Sources */,

@@ -15,4 +15,18 @@
 
 @implementation TopicModel
 
+-(instancetype)initWithDic:(NSDictionary*)dic{
+    self = [super init];
+    if (self) {
+        if ([dic isKindOfClass:[NSDictionary class]]) {
+            NSString* tempStr = dic[@"artid"];
+            if ([tempStr isKindOfClass:[NSString class]] ||
+                [tempStr isKindOfClass:[NSNumber class]]) {
+                _ID = [NSString stringWithFormat:@"%zd", tempStr.integerValue];
+            }
+            _title = dic[@"title"];
+        }
+    }
+    return self;
+}
 @end
