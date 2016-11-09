@@ -18,7 +18,6 @@ static const CGFloat HomeMenuH = 40.0f;
 
 @property(nonatomic, strong)TopicCategoryModel* model;
 @property(nonatomic, assign)BOOL currSelected;
-//@property(nonatomic, strong)UIColor* titleTextColor;
 @property(nonatomic, readonly)UIFont* titleFont;
 
 - (instancetype)initWithTitle:(NSString*)title;

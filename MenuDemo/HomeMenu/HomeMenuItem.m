@@ -36,11 +36,6 @@ const CGFloat defualtW = 50;
     return self.titleLabel.font;
 }
 
-//-(void)setTitleTextColor:(UIColor *)titleTextColor{
-//    _titleTextColor = titleTextColor;
-//    self.titleLabel.textColor = titleTextColor;
-//}
-
 -(void)setModel:(TopicCategoryModel *)model{
     _model = [model copy];
     self.titleLabel.text = model.categoryName;
