@@ -11,6 +11,6 @@
 @implementation TopicViewModel
 
 -(CGFloat)totalHeight{
-    return 100.0;
+    return 150.0;
 }
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "TopicListView.h"
+#import "TopicListCell.h"
 
 @implementation TopicListView
 
@@ -14,6 +15,7 @@
     self= [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
+        self.rowHeight = kDetaultCellH;
     }
     return self;
 }

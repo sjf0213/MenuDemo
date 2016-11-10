@@ -203,21 +203,21 @@ const CGFloat   TipY = 104.0;
     [self.mainView.mj_footer endRefreshing];
 }
 
+#pragma mark - UITableViewDatasource
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSInteger n = 0;
-    TopicListView* listView = nil;
+    NSInteger count = 0;
     if ([tableView isKindOfClass:[TopicListView class]]) {
-        listView = (TopicListView*)tableView;
-        n = self.dataArr.count;
-        
-        if(n == 0){
+        count = self.dataArr.count;
+        if(count == 0){
             tableView.mj_footer.hidden = YES;
         }else{
             tableView.mj_footer.hidden = NO;
         }
     }
-    return n;
+    DLog(@"-----------numberOfRowsInSection = %zd", count);
+    return count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -225,9 +225,13 @@ const CGFloat   TipY = 104.0;
     if (self.dataArr.count > indexPath.row) {
         TopicViewModel* cellData = self.dataArr[indexPath.row];
         if ([cellData  isKindOfClass:[TopicViewModel class]]) {
-            TopicListCell* cell = (TopicListCell*)[tableView dequeueReusableCellWithIdentifier:TopicListCellIdentifier forIndexPath:indexPath];
-            [cell clearData];
-            [cell loadCellData:cellData];
+            UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:TopicListCellIdentifier forIndexPath:indexPath];
+            if ([cell isKindOfClass:[TopicListCell class]]) {
+                TopicListCell* topicCell = (TopicListCell*)cell;
+                [topicCell clearData];
+                [topicCell loadCellData:cellData];
+                return cell;
+            }
         }
     }
     return [UITableViewCell new];

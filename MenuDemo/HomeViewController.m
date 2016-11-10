@@ -64,6 +64,13 @@
     }
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    // 初始化首页列表
+    [self addListToPosIndex:0];
+}
+
 #pragma mark - 引用属性
 
 -(ListViewController*)ListForIndex:(NSInteger)k{

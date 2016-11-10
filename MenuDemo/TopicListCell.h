@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class TopicViewModel;
+static CGFloat kDetaultCellH = 100;
 static NSString* TopicListCellIdentifier = @"TopicListCell";
 
 @interface TopicListCell : UITableViewCell

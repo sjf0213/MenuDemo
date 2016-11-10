@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface TopicListView : UITableView
 @property(nonatomic, assign)BOOL notVisible;
 @end

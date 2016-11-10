@@ -24,6 +24,8 @@
         self.titleLabel = [[UILabel alloc] init];
         self.titleLabel.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.2];
         [self.contentView addSubview:self.titleLabel];
+        
+        
     }
     return self;
 }
