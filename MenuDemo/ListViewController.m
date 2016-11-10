@@ -63,6 +63,13 @@ const CGFloat   TipY = 104.0;
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    DLog(@"--------------controller v will disappear : %zd", self.categoryId);
+}
+
+#pragma mark - biz
+
 -(void)startRequestByCategory:(NSInteger)categoryId withPageIndex:(NSInteger)p {
     __weak typeof(self) wself = self;
     __block NSInteger fetchItemCount = 0;
@@ -212,8 +219,10 @@ const CGFloat   TipY = 104.0;
         count = self.dataArr.count;
         if(count == 0){
             tableView.mj_footer.hidden = YES;
+            self.mainView.showBg = YES;
         }else{
             tableView.mj_footer.hidden = NO;
+            self.mainView.showBg = NO;
         }
     }
     DLog(@"-----------numberOfRowsInSection = %zd", count);

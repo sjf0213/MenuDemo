@@ -10,5 +10,6 @@
 
 
 @interface TopicListView : UITableView
+@property(nonatomic, assign)BOOL showBg;
 @property(nonatomic, assign)BOOL notVisible;
 @end
