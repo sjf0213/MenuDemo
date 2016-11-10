@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class TopicViewModel;
+static NSString* TopicListCellIdentifier = @"TopicListCell";
 
 @interface TopicListCell : UITableViewCell
+
+- (void)clearData;
+- (void)loadCellData:(TopicViewModel*)topicFrame;
 
 @end

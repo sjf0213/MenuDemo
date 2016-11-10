@@ -13,11 +13,12 @@
 #import "LHRefreshTip.h"
 #import "TopicModel.h"
 #import "TopicViewModel.h"
+#import "TopicListCell.h"
 
 const NSInteger PageSize = 15;
 const CGFloat   TipY = 104.0;
 
-@interface ListViewController ()
+@interface ListViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong, readwrite)TopicListView* mainView;
 @property(nonatomic, assign) NSInteger pageIndex;
 @property(nonatomic, strong) NSMutableArray* dataArr;
@@ -31,6 +32,9 @@ const CGFloat   TipY = 104.0;
     if (self) {
         self.view.frame = frame;
         self.mainView = [[TopicListView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        self.mainView.dataSource = self;
+        self.mainView.delegate = self;
+        [self.mainView registerClass:[TopicListCell class] forCellReuseIdentifier:TopicListCellIdentifier];
         [self.view addSubview:self.mainView];
         
         
@@ -197,5 +201,47 @@ const CGFloat   TipY = 104.0;
     [self.mainView reloadData];
     [self.mainView.mj_header endRefreshing];
     [self.mainView.mj_footer endRefreshing];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSInteger n = 0;
+    TopicListView* listView = nil;
+    if ([tableView isKindOfClass:[TopicListView class]]) {
+        listView = (TopicListView*)tableView;
+        n = self.dataArr.count;
+        
+        if(n == 0){
+            tableView.mj_footer.hidden = YES;
+        }else{
+            tableView.mj_footer.hidden = NO;
+        }
+    }
+    return n;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.dataArr.count > indexPath.row) {
+        TopicViewModel* cellData = self.dataArr[indexPath.row];
+        if ([cellData  isKindOfClass:[TopicViewModel class]]) {
+            TopicListCell* cell = (TopicListCell*)[tableView dequeueReusableCellWithIdentifier:TopicListCellIdentifier forIndexPath:indexPath];
+            [cell clearData];
+            [cell loadCellData:cellData];
+        }
+    }
+    return [UITableViewCell new];
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.dataArr.count > indexPath.row) {
+        TopicViewModel* cellData = self.dataArr[indexPath.row];
+        if ([cellData  isKindOfClass:[TopicViewModel class]]) {
+            return [cellData totalHeight];
+        }
+    }
+    return 0;
 }
 @end
