@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		71E1C23369D95652D7D199D8 /* libPods-MenuDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA04FE0C2D47EFC7D1103F84 /* libPods-MenuDemo.a */; };
+		F00493511DD59494004BB847 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00493501DD59494004BB847 /* DetailViewController.m */; };
 		F078D6DE1DD16FC2003817D3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F078D6DD1DD16FC2003817D3 /* HomeViewController.m */; };
 		F078D6E01DD17CFE003817D3 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F078D6DF1DD17CFE003817D3 /* WebImage.framework */; };
 		F078D6E11DD17CFE003817D3 /* WebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F078D6DF1DD17CFE003817D3 /* WebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -58,6 +59,8 @@
 		242A9D05F38A6F4D247087E4 /* Pods-MenuDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MenuDemo/Pods-MenuDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9283F07338471C8B660D2FF6 /* Pods-MenuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MenuDemo/Pods-MenuDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		EA04FE0C2D47EFC7D1103F84 /* libPods-MenuDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MenuDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F004934F1DD59494004BB847 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		F00493501DD59494004BB847 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F078D6DC1DD16FC2003817D3 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		F078D6DD1DD16FC2003817D3 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		F078D6DF1DD17CFE003817D3 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				F0CA03251DD3231700C721E9 /* DiscoveryListController.m */,
 				F0CA03271DD3233700C721E9 /* NormalListController.h */,
 				F0CA03281DD3233700C721E9 /* NormalListController.m */,
+				F004934F1DD59494004BB847 /* DetailViewController.h */,
+				F00493501DD59494004BB847 /* DetailViewController.m */,
 			);
 			path = MenuDemo;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 				F0CA02F01DD2BB5700C721E9 /* ListViewController.m in Sources */,
 				F0CA03121DD30BBB00C721E9 /* LHNetClient.m in Sources */,
 				F08CC0B01DD02529001DDE0B /* AppDelegate.m in Sources */,
+				F00493511DD59494004BB847 /* DetailViewController.m in Sources */,
 				F0CA03081DD30A7100C721E9 /* TopicListCell.m in Sources */,
 				F08BC5841DD1AC3700DAB9F2 /* MainNavigationController.m in Sources */,
 				F0CA03261DD3231700C721E9 /* DiscoveryListController.m in Sources */,

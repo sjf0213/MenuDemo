@@ -14,6 +14,7 @@
 #import "TopicModel.h"
 #import "TopicViewModel.h"
 #import "TopicListCell.h"
+#import "DetailViewController.h"
 
 const NSInteger PageSize = 15;
 const CGFloat   TipY = 104.0;
@@ -259,6 +260,12 @@ const CGFloat   TipY = 104.0;
 }
 
 #pragma mark - UITableViewDelegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DetailViewController* vc = [[DetailViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.dataArr.count > indexPath.row) {
