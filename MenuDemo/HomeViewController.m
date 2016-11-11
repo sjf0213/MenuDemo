@@ -92,6 +92,9 @@
     [self addListToPosIndex:index];
     
     // 对于已经不可见的列表视图做相应的处理
+    for (ListViewController* v in self.listControllerArr) {
+        [self checkVisible:v];
+    }
 }
 
 -(void)addListToPosIndex:(NSInteger)index{
@@ -112,6 +115,19 @@
     
     TopicCategoryModel* category = [self.homeMenu categoryModelInPosition:index];
     [listController setCategoryId:category.categoryId];
+}
+
+-(void)checkVisible:(ListViewController*)vc{
+    // 检测View是否可见
+    if (NO == [vc isKindOfClass:[ListViewController class]]) {
+        return;
+    }
+    CGRect rc = [self.mainScroll convertRect:vc.view.frame toView:[UIApplication sharedApplication].keyWindow];
+    if (CGRectIntersectsRect([UIScreen mainScreen].bounds, rc)){
+        vc.notVisible = NO;
+    }else{
+        vc.notVisible = YES;
+    }
 }
 
 #pragma mark - UIScrollViewDelegate

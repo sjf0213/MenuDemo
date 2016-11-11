@@ -91,7 +91,7 @@ const CGFloat   TipY = 104.0;
             }
         }else{
             DLog(@"--error.code = %zd, description = %@", error.code, [error localizedDescription]);
-            if (NO == self.mainView.notVisible) {
+            if (NO == self.notVisible) {
                 [LHRefreshTip showText:@"获取数据失败" parentView:wself.view withY:TipY];
             }
             [self.mainView.mj_header endRefreshing];
@@ -170,7 +170,7 @@ const CGFloat   TipY = 104.0;
 -(void)showRefreshTipForNormal:(NSInteger)itemCount
           withRequestPageIndex:(NSInteger)p{
     NSString* tip = @"";
-    if (self.mainView.notVisible) {
+    if (self.notVisible) {
         return;
     }
     // 下拉刷新,有没有数据都提示
@@ -208,6 +208,18 @@ const CGFloat   TipY = 104.0;
     [self.mainView reloadData];
     [self.mainView.mj_header endRefreshing];
     [self.mainView.mj_footer endRefreshing];
+}
+
+#pragma mark - 不可见的处理
+-(void)setNotVisible:(BOOL)notVisible{
+    _notVisible = notVisible;
+    if (notVisible) {
+        [self clearWhenNotVisible];
+    }
+}
+
+-(void)clearWhenNotVisible{
+    DLog(@"----------clearWhenNotVisible:%zd", self.categoryId);
 }
 
 #pragma mark - UITableViewDatasource
