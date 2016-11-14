@@ -7,9 +7,11 @@
 //
 
 #import "DetailViewController.h"
+#import <WebKit/WebKit.h>
 
-@interface DetailViewController ()
-
+@interface DetailViewController ()<WKNavigationDelegate>
+@property (nonatomic, strong) WKWebView *mainWV;
+@property (nonatomic, assign) BOOL appearedOnce;
 @end
 
 @implementation DetailViewController
@@ -18,6 +20,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    
+//    self.mainWV = [[WKWebView alloc] initWithFrame:self.view.bounds];
+//    self.mainWV.navigationDelegate = self;
+//    self.mainWV.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.3];
+//    DLog(@".........viewDidLoad....frame = %@", NSStringFromCGRect(self.view.frame));
+//    [self.view addSubview:self.mainWV];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,14 +33,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)viewDidLayoutSubviews{
+    self.mainWV.frame = self.view.frame;
+    DLog(@".........viewDidLayoutSubviews....frame = %@", NSStringFromCGRect(self.view.frame));
 }
-*/
+
+-(void)setUrl:(NSURL *)url{
+    _url = [url copy];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if (NO == self.appearedOnce) {
+        NSURL* url = self.url;
+        if ([url isKindOfClass:[NSURL class]]) {
+            NSURLRequest* request = [NSURLRequest requestWithURL:url];
+            [self.mainWV loadRequest:request];
+        }
+    }
+}
 
 @end

@@ -264,6 +264,7 @@ const CGFloat   TipY = 104.0;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DetailViewController* vc = [[DetailViewController alloc] init];
+    vc.url = [NSURL URLWithString:@"http://www.baidu.com"];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
