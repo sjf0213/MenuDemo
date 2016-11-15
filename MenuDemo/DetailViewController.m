@@ -19,13 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor cyanColor];
     
-//    self.mainWV = [[WKWebView alloc] initWithFrame:self.view.bounds];
-//    self.mainWV.navigationDelegate = self;
-//    self.mainWV.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.3];
-//    DLog(@".........viewDidLoad....frame = %@", NSStringFromCGRect(self.view.frame));
-//    [self.view addSubview:self.mainWV];
+    self.mainWV = [[WKWebView alloc] initWithFrame:self.view.bounds];
+    self.mainWV.navigationDelegate = self;
+    self.mainWV.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.3];
+    DLog(@".........viewDidLoad....frame = %@", NSStringFromCGRect(self.view.frame));
+    [self.view addSubview:self.mainWV];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,7 +34,7 @@
 }
 
 -(void)viewDidLayoutSubviews{
-    self.mainWV.frame = self.view.frame;
+    self.mainWV.frame = self.view.bounds;
     DLog(@".........viewDidLayoutSubviews....frame = %@", NSStringFromCGRect(self.view.frame));
 }
 
@@ -52,5 +52,6 @@
         }
     }
 }
+
 
 @end
