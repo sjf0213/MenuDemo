@@ -1,12 +1,19 @@
 PODS:
+  - Crashlytics (3.8.3):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.11)
   - MJRefresh (3.1.12)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - MJRefresh
 
 SPEC CHECKSUMS:
+  Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
 
-PODFILE CHECKSUM: 9fd9aba5b4e6f210eeef45f81a7b115e7fb97163
+PODFILE CHECKSUM: 36f37bd0cdab556f598adaae0fd6fa4a9a3f8313
 
 COCOAPODS: 1.1.1
